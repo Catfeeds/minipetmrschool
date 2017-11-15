@@ -1,0 +1,48 @@
+<view class="tab"> 
+<!--头部-->
+      <view class="tab-left" bindtap="tabFun"> 
+          <view class="{{tabArr.curHdIndex=='0'? 'active' : ''}}" id="tab-hd01" data-id="0">专业美容师</view>
+          <view class="{{tabArr.curHdIndex=='1'? 'active' : ''}}" id="tab-hd02" data-id="1">专业讯犬师</view> 
+         <view class="{{tabArr.curHdIndex=='2'? 'active' : ''}}" id="tab-hd03" data-id="2">专业讯犬师</view> 
+      </view> 
+
+<view class="tab-right"> 
+ <!--one-->
+    <view class="right-item {{tabArr.curBdIndex=='0'? 'active' : ''}}" wx:for="{{left}}" >
+    <image class="ig" src="{{item.img}}"></image>
+        <view class="boxx">
+            <view class="ming">{{item.ming}}</view>
+            <view class="m">{{item.m}}</view>
+            <view class="m">{{item.mc}}</view>
+            <view class="m">{{item.mi}}</view>
+            <view class="m">{{item.cheng}}</view>
+                  <view class="m">{{item.cheng}}</view>
+    </view>
+   </view>
+<!--two-->
+ <view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}" wx:for="{{right}}">
+    <image class="ig" src="{{item.img}}"></image>
+        <view class="boxx">
+            <view class="ming">{{item.ming}}</view>
+            <view class="m">{{item.m}}</view>
+            <view class="m">{{item.mc}}</view>
+            <view class="m">{{item.mi}}</view>
+            <view class="m">{{item.cheng}}</view>
+    </view>
+    </view>
+<!--tree-->
+ <view class="right-item {{tabArr.curBdIndex=='2'? 'active' : ''}}" wx:for="{{ri}}">
+    <image class="ig" src="{{item.img}}"></image>
+        <view class="boxx">
+            <view class="ming">{{item.ming}}</view>
+            <view class="m">{{item.m}}</view>
+            <view class="m">{{item.mc}}</view>
+            <view class="m">{{item.mi}}</view>
+            <view class="m">{{item.cheng}}</view>
+    </view>
+    </view>
+
+
+
+</view>
+</view>

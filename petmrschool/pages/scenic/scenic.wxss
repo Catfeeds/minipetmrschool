@@ -1,0 +1,57 @@
+.jingdian{
+    margin: 20rpx;
+}
+.jin{
+width:6%;
+height:27rpx;
+}
+.jindin{
+  font-weight:700;
+  margin-left: 10rpx;
+}
+.tuwen{
+ /*border-top:1px solid #ccc;*/
+ font-size: 30rpx;
+ padding-top: 20rpx;
+  padding-bottom: 20rpx;
+ 
+  border-bottom: 1px solid #ccc
+}
+.tuwen text{ 
+ line-height: 47rpx;
+}
+li{
+    font-weight: 700;
+    font-size: 32rpx;
+}
+.jpg{
+    padding: 20rpx 0;
+    width: 100%;
+}
+.zixun{
+    font-size: 30rpx;
+    padding:27rpx 20rpx;
+}
+.lv{
+    font-size: 43rpx;
+    font-weight: 700;
+}
+.classname{
+    margin: 15rpx 0;
+    line-height: 50rpx;
+    border: 1px solid #ccc;
+    padding: 20rpx;
+}
+.zi{
+    font-size: 37rpx;
+    font-weight: 700
+}
+.ji{
+    font-size: 30rpx;
+}
+.tuan{
+    margin: 20rpx 0
+}
+.jj{
+    margin-top: 20rpx;
+}

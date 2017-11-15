@@ -1,0 +1,80 @@
+.tab {
+  flex-direction: row;
+  width: 100%;
+}
+
+.tab-left {
+  width: 100%;
+  line-height: 160%;
+  font-size: 34rpx;
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
+}
+
+.tab-left view {
+  text-align: center;
+  display: inline-block;
+  width: 33.3%;
+  height: 38px;
+  line-height: 38px;
+  font-family: "微软雅黑", "黑体";
+}
+
+.tab-left .active {
+  color: #fff;
+  background: #ccc;
+}
+
+.tab-right {
+  line-height: 160%;
+}
+
+.tab-right .right-item {
+  padding: 30rpx 20rpx;
+  /*padding-left: 15rpx; */
+  display: none;
+  height: 204rpx;
+  border-bottom: 1px solid #ccc;
+  padding-right: 0px;
+}
+
+.tab-right .right-item.active {
+  display: block;
+}
+
+.ig {
+  width: 208rpx;
+  height: 208rpx;
+  float: left;
+
+}
+
+.boxx {
+  display: inline-block;
+  width: 63%;
+  padding-left: 20rpx;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ming {
+  font-family: "微软雅黑", "黑体";
+  font-weight: 700;
+  font-size: 32rpx;  line-height: 47rpx;
+}
+
+.m {
+  font-family: "微软雅黑", "黑体";
+  line-height: 39rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #666;
+}
+
+.cheng {
+  font-family: "微软雅黑", "黑体";
+  font-size: 28rpx;
+  color: #666;
+}

@@ -1,0 +1,8 @@
+<view class="cont" wx:for="{{fengcai}}" bindtap="fengcai" data-id="{{item.id}}">
+  <image src="{{item.photo}}"></image>
+      <view class="classname">
+          <text style="color: #333;">{{item.title}}</text>
+          <span class='sp'>></span>
+      </view>
+</view>
+<view class="clear mt10" bindtap="getMore">点击查看更多</view>

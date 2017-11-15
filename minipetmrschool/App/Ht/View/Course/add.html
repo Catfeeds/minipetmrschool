@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理</title>
+<link href="__PUBLIC__/ht/css/main.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/ht/css/jquery.datetimepicker.css"/>
+<script type="text/javascript" src="__PUBLIC__/ht/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/ht/js/action.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugins/xheditor/xheditor-1.2.1.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/plugins/xheditor/xheditor_lang/zh-cn.js"></script>
+</head>
+<script type="text/javascript">
+$(function(){
+    //初始化编辑器
+    $('#content').xheditor({
+      skin:'nostyle' ,
+      upImgUrl:'{:U("Upload/xheditor")}'
+    });
+}); 
+</script>
+<body>
+
+<div class="aaa_pts_show_1">【 课程管理 】</div>
+
+<div class="aaa_pts_show_2">
+    
+    <div>
+       <div class="aaa_pts_4"><a href="{:U('index')}">全部课程</a></div>
+       <div class="aaa_pts_4"><a href="{:U('add')}">课程编辑</a></div>
+    </div>
+    <div class="aaa_pts_3">
+      <form action="{:u('save')}" method="post" enctype="multipart/form-data" onsubmit="return ac_from();">
+      <ul class="aaa_pts_5">
+         <li>
+            <div class="d1">课程标题:</div>
+            <div>
+              <input class="inp_1" name="title" id="title" style="width:400px;" value="<?php echo $info['title']; ?>"/>
+            </div>
+         </li>
+         <li>
+            <div class="d1">课程摘要:</div>
+            <div>
+              <textarea class="inp_1 inp_2" name="intro" id="intro" style="height:80px; width:400px;"/><?php echo $info['intro']; ?></textarea>
+            </div>
+         </li>
+         <li>
+            <div class="d1">报名费用:</div>
+            <div>
+              <input style="width: 150px;" class="inp_1" name="price" id="price" value="<?php echo $info['price']; ?>"/> &nbsp;&nbsp;如果不填则表示待定
+            </div>
+         </li>
+         <li>
+            <div class="d1">预付金:</div>
+            <div>
+              <input style="width: 150px;" class="inp_1" name="yu_price" id="yu_price" value="<?php echo $info['yu_price']; ?>"/> &nbsp;&nbsp;如果不填则表示只报名不支付，前台将不会发起支付
+            </div>
+         </li>
+         <li>
+            <div class="d1">开课时间:</div>
+            <div>
+              <input style="width: 150px;" class="inp_1" name="opentime" id="opentime" value="<?php echo $info['opentime']; ?>" onfocus="getdate();" />&nbsp;&nbsp;如果不填则表示待定(格式：2017-05-29 09:00)
+            </div>
+         </li>
+         <li>
+            <div class="d1">课    时:</div>
+            <div>
+              <input style="width: 150px;" class="inp_1" name="class_hour" id="class_hour" value="<?php echo $info['class_hour']; ?>"/>&nbsp;&nbsp;如果不填则表示待定
+            </div>
+         </li>
+         <li>
+            <div class="d1">针对人群:</div>
+            <div>
+              <input class="inp_1" name="people" id="people" value="<?php echo $info['people']; ?>"/>
+            </div>
+         </li>
+         <li>
+            <div class="d1">教学目的:</div>
+            <div>
+              <input class="inp_1" name="teach_goals" id="teach_goals" value="<?php echo $info['teach_goals']; ?>"/>
+            </div>
+         </li>
+         <li>
+            <div style="color:#c00; font-size:14px; padding-left:20px;">列表图：200*170，详情图：400*240，图片格式jpg、jpeg、png</div>
+         </li>
+         <li>
+            <div class="d1">列表图:</div>
+            <div>
+              <if condition="$info['photo'] neq ''">
+              <img src="__DATA__/<?php echo $info['photo']; ?>" style="width:100px;height:85px;" />
+              </if>
+			        <input type="file" name="file" id="photo" />
+            </div>
+         </li>
+         <li>
+            <div class="d1">详情图:</div>
+            <div>
+              <if condition="$info['photo_xq'] neq ''">
+              <img src="__DATA__/<?php echo $info['photo_xq']; ?>" style="width:200px;height:120px;" />
+              </if>
+              <input type="file" name="files" id="photo_xq" />
+            </div>
+         </li>
+         <li>
+            <div class="d1">课程介绍:</div>
+            <div>
+              <textarea class="inp_1 inp_2" name="content" id="content"/><?php echo $info['content']; ?></textarea>
+            </div>
+         </li>
+         <input type="hidden" name="id" value="<?php echo (int)$info['id']; ?>"/>
+         <li><input type="submit" name="submit" value="提交" class="aaa_pts_web_3" border="0"></li>
+      </ul>
+      </form>
+         
+    </div>
+    
+</div>
+<script>
+function ac_from(){
+
+  var title=document.getElementById('title').value;
+  if(!title){
+	  alert('请输入课程名称！');
+	  return false;
+	} 
+	  
+}
+</script>
+<!-- <script src="__PUBLIC__/ht/js/jquery.date.js"></script>
+<script src="__PUBLIC__/ht/js/jquery.datetimepicker.js"></script> -->
+<script>
+/*$('#opentime').datetimepicker({
+      format:'Y-m-d H:00',
+      formatDate:'Y-m-d H:00',
+    });*/
+</script> 
+</body>
+</html>

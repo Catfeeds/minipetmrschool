@@ -1,0 +1,68 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/product/detail",
+    "pages/search/search",
+    "pages/user/user",
+    "pages/kecheng/kecheng",
+    "pages/user/dingdan",
+    "pages/user/shoucang",
+    "pages/user/tuihuo",
+    "pages/order/pay",
+    "pages/order/detail",
+    "pages/order/downline",
+    "pages/cart/cart",
+    "pages/listdetail/listdetail",
+    "pages/address/address",
+    "pages/address/user-address/user-address",
+    "pages/category/index",     
+    "pages/ritual/ritual",   
+    "pages/rituall/rituall", 
+    "pages/shop_store/shop_store", 
+    "pages/news/news",
+    "pages/inf/inf",
+    "pages/strengths/strengths",
+    "pages/scenic/scenic",
+    "pages/synopsis/synopsis",  
+    "pages/works/works",
+    "pages/student_style/student_style",
+    "pages/class/class"
+      ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#ff4081",
+    "navigationBarTitleText": "宠物美容学校",
+    "navigationBarTextStyle":"white"
+
+  },
+   "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#dd2727",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath":"images/souu.png",
+      "selectedIconPath":"images/shou.png",
+      "text": "首页"
+    }, 
+        {
+      "pagePath": "pages/category/index",
+      "iconPath":"images/fei.png",
+      "selectedIconPath":"images/feii.png",
+      "text": "分类"
+    },
+       {
+      "pagePath": "pages/cart/cart",
+      "iconPath":"images/ggg.png",
+      "selectedIconPath":"images/gi.png",
+      "text": "购物车"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "iconPath":"images/hui.png",
+      "selectedIconPath":"images/huiyuan.png",
+      "text": "我的"
+    }]
+  }
+}

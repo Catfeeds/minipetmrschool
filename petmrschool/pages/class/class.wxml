@@ -1,0 +1,51 @@
+<view class="new" >
+
+  <view class="biaoti">{{courseInfo.title}}</view>
+
+  <view class="riqi">
+    <text>{{courseInfo.eng}}</text>
+  </view>
+  <!--新闻-->
+  <view class="news">
+<view>
+    <image class="ima" src="{{courseInfo.photo_xq}}"></image>
+    <view class="na">
+      <i> 基本信息 </i>
+    </view>
+    <p>
+      <b style="color:#666">价格：</b><text style="color:red;">{{courseInfo.price}}</text>
+    </p>
+    <p>
+      <b style="color:#666">预付金额：</b><text style="color:red;">{{courseInfo.yu_price}}</text>
+    </p>
+    <p>
+      <b style="color:#666">开课时间：</b>{{courseInfo.opentime}}
+    </p>
+    <p>
+      <b style="color:#666">课   时：</b>{{courseInfo.class_hour}}
+    </p>
+    <p>
+      <b style="color:#666">适合人群：</b>
+      {{courseInfo.people}}
+    </p>
+    <p>
+      <b style="color:#666">教学目的：</b>
+      {{courseInfo.teach_goals}}
+    </p>
+ </view>
+<view class="na">
+    <i> 课程介绍 </i>
+</view>
+    <view class="contai c-font-center" >
+      <import src="../../wxParse/wxParse.wxml"/> 
+      <view class="wxParse">
+            <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view bindtap="bm" data-id="{{courseInfo.id}}" data-cprice="{{courseInfo.yu_price}}" data-title="{{courseInfo.title}}">
+<image class="baoming" src="../../images/bm.png"></image>
+</view>
